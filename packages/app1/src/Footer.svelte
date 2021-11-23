@@ -1,0 +1,1 @@
+<footer>Footer in Svelte - App1</footer>
