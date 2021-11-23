@@ -6,6 +6,7 @@ const path = require("path");
 module.exports = {
     entry: "./src/index",
     mode: "development",
+    devtool: "source-map",
     devServer: {
         static: {
             directory: path.join(__dirname, "dist"),
@@ -29,13 +30,12 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: "home",
+            name: "app2",
             filename: "remoteEntry.js",
             exposes: {
-                "./Mining": "./src/Mining",
+                "./Header": "./src/Header.js",
             },
             shared: {
-                ...deps,
                 react: {
                     singleton: true,
                     requiredVersion: deps.react,

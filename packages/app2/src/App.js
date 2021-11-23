@@ -1,8 +1,9 @@
-import Mining from "./Mining";
+import React from "react";
+import Header from "./Header";
 
 const App = () => (
     <div>
-        <Mining />
+        <Header />
     </div>
 );
 

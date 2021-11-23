@@ -60,9 +60,23 @@ module.exports = {
             name: "appshell",
             remotes: {
                 app1: "app1@http://localhost:3002/remoteEntry.js",
+                app2: "app2@http://localhost:3003/remoteEntry.js",
             },
             shared: [
-                { svelte: { singleton: true } },
+                {
+                    vue: {
+                        singleton: true
+                    },
+                    svelte: {
+                        singleton: true
+                    },
+                    react: {
+                        singleton: true,
+                    },
+                    "react-dom": {
+                        singleton: true,
+                    },
+                },
             ],
         }),
         new HtmlWebpackPlugin({
