@@ -12,3 +12,5 @@
 - run `lerna bootstrap`
 - run `lerna run start`
 - visit http://localhost:3001/
+
+![screenshot1](/docs/microapptest.png)
