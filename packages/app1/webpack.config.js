@@ -70,7 +70,8 @@ module.exports = {
             filename: "remoteEntry.js",
             exposes: {
                 "./Mining": "./src/Mining.svelte",
-                "./Footer": "./src/Footer.svelte"
+                "./Footer": "./src/Footer.svelte",
+                "./Modal": "./src/Modal.svelte"
             },
             shared: [
                 { svelte: { singleton: true } },

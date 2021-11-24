@@ -12,7 +12,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, "dist")
         },
-        port: 3001,
+        port: 3004,
         hot: true,
     },
     output: {
@@ -57,26 +57,15 @@ module.exports = {
         // make sure to include the plugin for the magic
         new VueLoaderPlugin(),
         new ModuleFederationPlugin({
-            name: "appshell",
-            remotes: {
-                app1: "app1@http://localhost:3002/remoteEntry.js",
-                app2: "app2@http://localhost:3003/remoteEntry.js",
-                app3: "app3@http://localhost:3004/remoteEntry.js",
+            name: "app3",
+            filename: "remoteEntry.js",
+            exposes: {
+                "./ModalTrigger": "./src/ModalTrigger.vue",
             },
             shared: [
                 {
-                    vue: {
-                        singleton: true
-                    },
-                    svelte: {
-                        singleton: true
-                    },
-                    react: {
-                        singleton: true,
-                    },
-                    "react-dom": {
-                        singleton: true,
-                    },
+                    vue:
+                        { singleton: true }
                 },
             ],
         }),
