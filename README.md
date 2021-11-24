@@ -13,4 +13,4 @@
 - run `lerna run start`
 - visit http://localhost:3001/
 
-![screenshot1](/docs/microapptest.png)
+![screenshot1](/docs/microapptest.PNG)
