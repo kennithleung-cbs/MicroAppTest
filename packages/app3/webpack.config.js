@@ -61,6 +61,7 @@ module.exports = {
             filename: "remoteEntry.js",
             exposes: {
                 "./ModalTrigger": "./src/ModalTrigger.vue",
+                "./GiphyClient": "./src/GiphyClient.vue"
             },
             shared: [
                 {

@@ -10,10 +10,16 @@
       <modal-trigger />
     </div>
 
+    <div class="component">
+      <giphy-client :page="0" />
+    </div>
+    <div class="component">
+      <giphy-client :page="1" />
+    </div>
+
     <div ref="modal"></div>
 
     <div ref="footer" class="component"></div>
-    
   </div>
 </template>
 
@@ -23,10 +29,12 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 const ModalTrigger = () => import("app3/ModalTrigger");
+const GiphyClient = () => import("app3/GiphyClient");
 
 export default {
   components: {
     ModalTrigger,
+    GiphyClient,
   },
   mounted() {
     import("app2/Header").then((module) => {
