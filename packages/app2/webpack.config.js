@@ -16,6 +16,9 @@ module.exports = {
     output: {
         publicPath: "auto",
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
     module: {
         rules: [
             {
@@ -33,7 +36,7 @@ module.exports = {
             name: "app2",
             filename: "remoteEntry.js",
             exposes: {
-                "./Header": "./src/Header.js",
+                "./Header": "./src/Header.jsx",
             },
             shared: {
                 react: {
