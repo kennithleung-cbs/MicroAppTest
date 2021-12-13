@@ -1,5 +1,5 @@
 <div class="container">
-    <div>Carousel v1.0.0</div>
+    <div>Carousel v1.0.2</div>
 </div>
 
 <style>
