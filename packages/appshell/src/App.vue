@@ -6,6 +6,8 @@
 
     <div ref="mining" class="component"></div>
 
+    <div ref="carousel" class="component"></div>
+
     <div class="component">
       <modal-trigger />
     </div>
@@ -63,6 +65,14 @@ export default {
 
       new Footer({
         target: this.$refs.footer,
+      });
+    });
+
+    import("mf_carousel/Carousel").then((module) => {
+      const Carousel = module.default;
+
+      new Carousel({
+        target: this.$refs.carousel,
       });
     });
   },

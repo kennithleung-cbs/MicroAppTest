@@ -62,6 +62,7 @@ module.exports = {
                 app1: "app1@http://localhost:3002/remoteEntry.js",
                 app2: "app2@http://localhost:3003/remoteEntry.js",
                 app3: "app3@http://localhost:3004/remoteEntry.js",
+                mf_carousel: "_achhoeun_mf_carousel@https://unpkg.com/@achhoeun/mf-carousel@1.0.2/dist/browser/remoteEntry.js",
             },
             shared: [
                 {
